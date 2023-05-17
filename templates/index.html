@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raspberry Pi Real-Time Mint Counting</title>
+</head>
+
+<style>
+  body{
+    margin: 0px;
+    background-color: #131313;
+  }
+  .bodyH10{
+    display: block;
+    color: aliceblue;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .bodyH11{
+    display: block;
+    color: aliceblue;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .bodyVideo0{
+    margin-top: 0px;
+    border-style: solid;
+    border-color: whitesmoke;
+    height: 44.4444vh;
+    width: 32.3232vw;
+    background-color: #FFFFFF;
+  }
+</style>
+
+<body>
+    <h1 class="bodyH10">Raspberry Pi Real-Time Mint Counting</h1>
+    <h1 class="bodyH11">Mints: <span id="numCircles"></span></h1>
+    <img class="bodyVideo0" src="{{ url_for('video_feed') }}" alt="Video Stream">
+    <script>
+      // Function to fetch the number of circles from the server and update the value in the HTML
+      function fetchNumCircles() {
+          fetch('/mints')
+              .then(response => response.text())
+              .then(data => {
+                  document.getElementById('numCircles').innerText = data;
+              });
+      }
+
+      // Call the fetchNumCircles function 60 times a second to update the value dynamically
+      setInterval(fetchNumCircles, 1000.0 / 60);
+  </script>
+</body>
+</html>
