@@ -2,7 +2,9 @@
 
 This is a Real-Time Mint Counting program tested using the Raspberry Pi 3 B+ using Raspberry Pi OS Lite (64-bit), it may work on other devices, however. This program uses a Raspberry Pi Camera Module V2 connected to the Raspberry Pi with a CSI camera port to take video for detecting how much mints there are but also to stream that video on a local network to an internet browser along with other information all Real-Time streamed.
 
-Video: WIP
+Video: 
+
+https://github.com/mtootoonchi/Raspberry-Pi-Real-Time-Mint-Counting/assets/44936371/2e2fd377-b992-4743-a715-72fddf2f0a92
 
 To use this project, I recommend you use the hardware and OS that I used as this tutorial will assume this setup however, if you know what you are doing feel free to try other configs. With your Raspberry Pi make sure you can access it with a mouse and keyboard and view it with a monitor. I recommend you eventually set up SSH. After you boot up your Raspberry for the first time you need to do first time set up just follow the instructions on screen. I used ‘user’ as my username you may do the same. Afterwards you get the option of expanding the file system, setting up SSH, time zone, and internet. I recommend you do these things. In the new non-Legacy edition on the Raspberry Pi OS which I am using with the Raspberry Pi OS Lite (64-bit) you do not need to enable the camera since it is enabled by default in the new non-Legacy edition and you do not need legacy camera support. Here is the command to change these settings:
 
